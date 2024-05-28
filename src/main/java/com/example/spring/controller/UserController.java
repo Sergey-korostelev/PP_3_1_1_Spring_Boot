@@ -1,6 +1,7 @@
 package com.example.spring.controller;
 
 import com.example.spring.model.User;
+import com.example.spring.service.UserService;
 import com.example.spring.service.UserServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,9 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class UserController {
-    private final UserServiceImpl service;
+    private final UserService service;
 
-    public UserController(UserServiceImpl service) {
+    public UserController(UserService service) {
         this.service = service;
     }
 
